@@ -6,7 +6,9 @@ NOTE: The junit test classes won't compile until after you've completed tasks 1-
 ### TASK #1:
 
 Create a new functional interface named `ConcatStringFunction`.
+
 The interface should declare an abstract method named `apply` that takes a string array as a parameter and returns a string.
+
 ```java
 String apply(String[] strings);
 ```
@@ -16,7 +18,9 @@ Make sure to use the `@FunctionalInterface` annotation to force the compiler to 
 ### TASK #2:
 
 Create a new class `InorderUppercaseFunction` that implements the `ConcatStringFunction` interface.
+
 Override the `apply` method to concatenate and uppercase the parameter's array of strings :
+
 ```java
 return String.join("", strings).toUpperCase();
 ```
@@ -24,12 +28,15 @@ return String.join("", strings).toUpperCase();
 ### TASK #3:
 
 Create a new class `ReverseLowercaseFunction` that implements the `ConcatStringFunction` interface.
+
 Override the `apply` method to reverse the order of the array contents, then concatenate and lowercase
 the strings in the array.
+
 ```java
 Collections.reverse(Arrays.asList(strings));
 return String.join("", strings).toLowerCase();
 ```
+
 Add the necessary imports for `java.util.Collections` and `java.util.Arrays`.
 
 ### Task #4:
@@ -65,6 +72,7 @@ smoothiegrapebanana
 ```
 
 ### Task #5:
+
 Run the 3 Junit test classes in the test/java folder to confirm your implementation.
 
 - `ConcatStringFunctionTest` : Tests interface`ConcatStringFunction` annotated with `@FunctionalInterface`.
