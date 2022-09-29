@@ -1,19 +1,20 @@
 # Functional Interface Lab
 
 ## Instruction
-NOTE: The junit test classes won't compile until after you've completed tasks 1-3.
+NOTE: The junit test classes won't compile until tasks 1-3 are completed.
 
 ### TASK #1:
 
 Create a new functional interface named `ConcatStringFunction`.
 
-The interface should declare an abstract method named `apply` that takes a string array as a parameter and returns a string.
+The interface should declare an abstract method named `apply` that takes a string array
+as a parameter and returns a string.
 
 ```java
 String apply(String[] strings);
 ```
 
-Make sure to use the `@FunctionalInterface` annotation to force the compiler to check for a single abstract method.
+Use the `@FunctionalInterface` annotation to force the compiler to check for a single abstract method.
 
 ### TASK #2:
 
@@ -41,13 +42,13 @@ Add the necessary imports for `java.util.Collections` and `java.util.Arrays`.
 
 ### Task #4:
 
-Update the main method to test your function classes on an example array.
+Update the main method to test the function classes on an example array.
 
-We can declare the variable `ConcatStringFunction function` and then
-assign the variable to new instances of `InorderUppercaseFunction` and `ReverseLowercaseFunction` since
-both classes implement the interface.
+The variable `function` can be
+assigned to instances of `InorderUppercaseFunction` and `ReverseLowercaseFunction` since
+both classes implement the `ConcatStringFunction` interface.
 
-If your code does not compile, check that the classes do in fact implement the interface.
+If the code does not compile, check that the classes implement the interface.
 
 ```java
 public class Main {
@@ -75,6 +76,6 @@ smoothiegrapebanana
 
 Run the 3 Junit test classes in the test/java folder to confirm your implementation.
 
-- `ConcatStringFunctionTest` : Tests interface`ConcatStringFunction` annotated with `@FunctionalInterface`.
-- `InorderUppercaseFunctionTest` : Tests method  `InorderUppercaseFunction.apply()`.
-- `ReverseLowercaseFunctionTest` : Tests method  `ReverseLowercaseFunction.apply()`.
+- `ConcatStringFunctionTest` : Tests that interface`ConcatStringFunction` is annotated with `@FunctionalInterface`.
+- `InorderUppercaseFunctionTest` : Tests the method  `InorderUppercaseFunction.apply()`.
+- `ReverseLowercaseFunctionTest` : Tests the method  `ReverseLowercaseFunction.apply()`.
